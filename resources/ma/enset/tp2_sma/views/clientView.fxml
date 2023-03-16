@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.tp2_sma.controllers.ClientController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="searchField" prefHeight="30.0" prefWidth="200.0" promptText="Search by type">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="refreshBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Refresh">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </top>
+   <center>
+      <ListView fx:id="listView" maxHeight="1.7976931348623157E308" prefHeight="325.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox fx:id="footer" prefHeight="105.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="100.0" prefWidth="336.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.19998168945312" minWidth="10.0" prefWidth="48.80000610351563" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0000015258789" minWidth="9.599998474121087" prefWidth="15.200006103515626" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.00000152587893" minWidth="10.0" prefWidth="275.1999938964844" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Name " />
+                  <Label text="Type " GridPane.rowIndex="1" />
+                  <Label text="Buyer " GridPane.rowIndex="2" />
+                  <Label text=": " GridPane.columnIndex="1" />
+                  <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="nameLabel" text="-" GridPane.columnIndex="2" />
+                  <Label fx:id="typeLabel" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label fx:id="buyerLabel" text="-" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </GridPane>
+            <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="399.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="399.0">
+                     <children>
+                        <Label text="Status" />
+                        <Label text=":">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="serviceStatus" text="-">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets top="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="399.0">
+                     <children>
+                        <TextField fx:id="proposeField" promptText="Propose price" />
+                        <Button fx:id="sendProposalBtn" mnemonicParsing="false" text="Send ">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="399.0">
+                     <children>
+                        <Button fx:id="acceptBtn" mnemonicParsing="false" text="Accept" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="closeFooterBtn" mnemonicParsing="false" text="Close">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

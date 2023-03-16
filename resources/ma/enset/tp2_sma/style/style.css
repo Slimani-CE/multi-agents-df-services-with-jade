@@ -1,0 +1,56 @@
+.textWrap{
+    -fx-wrap-text: true;
+}
+Pane AnchorPane{
+    -fx-padding: 5px;
+}
+.text_flow{
+    -fx-background-color: rgba(30, 136, 229, 0.3);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #1e88e5;
+    -fx-border-width: 2;
+    -fx-padding: 7;
+    -fx-spacing: 7;
+    -fx-alignment: center;
+    -fx-text-fill: black;
+    /*shadow effect*/
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 0);
+}
+/*txet_flow if user agent that sent the message*/
+.text_flow_user_agent{
+    -fx-background-color: rgba(55, 220, 109, 0.3);
+    -fx-border-color: #1ba13d;
+}
+/*text_flow style if the message is an error*/
+.error{
+    -fx-background-color: rgba(255, 0, 0, 0.3);
+    -fx-border-color: #ff0000;
+}
+/*text_flow style if the message is an alert*/
+.alert_message{
+    -fx-background-color: rgba(255, 255, 0, 0.3);
+    -fx-border-color: #ffff00;
+}
+.hbox_server{
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-color: #1e88e5;
+    -fx-text-fill: #fff;
+}
+.send_btn{
+    -fx-text-fill: #fff;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: #1e88e5;
+    -fx-border-color: #1e88e5;
+    -fx-border-width: 2;
+    -fx-cursor: hand;
+}
+.input_field{
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 0 3;
+    -fx-border-color: #1e88e5;
+    -fx-text-fill: #1e88e5;
+    -fx-focus-traversable: false;
+}
